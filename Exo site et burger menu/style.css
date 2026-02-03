@@ -1,0 +1,184 @@
+/* ============================================
+   STYLES GLOBAUX
+   ============================================ */
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+}
+
+/* ============================================
+   EN-TÊTE
+   ============================================ */
+.header-top-close {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: left 1s ease;
+}
+
+#header-top ul {
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+#header-top ul a {
+  padding: 20px 15px;
+  display: inline-block;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: white;
+}
+
+#menu-mobile {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  background-color: black;
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+}
+.menu-close {
+  background-image: url(./image/bars-solid-full.svg);
+}
+
+.menu-open {
+  background-image: url(./image/xmark-solid-full.svg);
+}
+
+/* ============================================
+   BANNIÈRE
+   ============================================ */
+
+#section-banner {
+  background-image: url("./image/Roma\ in\ breve.jpg");
+  height: 80vh;
+  background-size: cover;
+}
+
+/* ============================================
+   ARTICLES ABOUT
+   ============================================ */
+
+.article-about {
+  display: flex;
+  margin-top: 80px;
+}
+
+.article-about div {
+  flex: 1;
+  /* equivalent de width 50% et permet de prendre l'intégralité de la place */
+  padding: 30px;
+}
+
+.article-about div img {
+  width: 100%;
+  border-radius: 25%;
+  object-fit: cover;
+}
+
+.article-about h3 {
+  text-align: center;
+}
+
+.article-about:nth-child(even) {
+  flex-direction: row-reverse;
+  /* pour inverser les articles sans toucher au HTML "odd" ou "even" */
+}
+
+/* ============================================
+   SECTION CTA
+   ============================================ */
+
+#section-cta {
+  background-image: url(./image/Rome_banner_panorama.jpg);
+}
+
+#section-cta .overlay {
+  padding-top: 55px;
+  padding-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================
+   NOTIFICATION EMAIL
+   ============================================ */
+
+#email-notification {
+  padding: 5px;
+  color: green;
+  border: 1px solid green;
+  background-color: #6aa26a;
+  border-radius: 15px;
+  position: fixed;
+  top: 40px;
+  left: -800px;
+  display: none;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 13px;
+  }
+
+  .article-about,
+  .article-about:nth-child(even) {
+    flex-direction: column;
+  }
+  h1,
+  h2 {
+    text-align: center;
+  }
+  .header-top-open {
+    transition: left 1s ease;
+  }
+  .header-top-close {
+    left: 800px;
+    height: 100vh;
+  }
+  #header-top nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-top: 100px;
+  }
+  #header-top nav ul li a {
+    font-size: 2.5rem;
+  }
+
+  #menu-mobile {
+    display: block;
+  }
+
+  .header-top-open {
+    left: 300px;
+  }
+}

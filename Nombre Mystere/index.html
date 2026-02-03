@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="game-container">
+      <h1>🎮 Nombre Mystère</h1>
+      <p>Devine un nombre entre 1 et 100</p>
+      <form id="guess-number-form" action="">
+        <input type="number" name="" id="guess-number-input" />
+        <button class="general-btn" type="submit" id="guess-number-btn">
+          Valider
+        </button>
+      </form>
+      <p id="message"></p>
+      <p>Essais restants <span id="tries">7</span></p>
+      <button class="general-btn" id="restart-btn">Rejouer</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

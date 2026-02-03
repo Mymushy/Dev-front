@@ -1,0 +1,42 @@
+/* SECTION TESTIMONIALS */
+
+#section-testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: var(--primary-color);
+  position: relative;
+  h3 {
+    font-size: var(--secondary-font-size);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+
+  #testimonials-next-btn,
+  #testimonials-prev-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;    
+    svg {            
+      cursor: pointer;   
+      height: 40px;
+    }
+    svg:hover{
+      opacity: 0.5;
+    }
+  }
+  #testimonials-next-btn {
+    right: 40px;
+  }
+  #testimonials-prev-btn {
+    left: 40px;
+  }
+}

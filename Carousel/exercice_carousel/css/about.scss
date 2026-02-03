@@ -1,0 +1,24 @@
+/* SECTION ABOUT */
+#section-about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .about-item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-item-container {
+    h3 {
+      font-size: var(--secondary-font-size);
+    }
+    img,
+    .about-item-container-content {
+      width: 50%;
+      padding: 20px;
+    }
+  }
+  
+  .about-item-container:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}

@@ -1,0 +1,22 @@
+inline: prend uniquement la place necessaire // Ignore les définitions de largeur (width), hauteur (height), et les marges verticales (margin-top/margin-bottom).
+
+block : prend toute la largeur du block // Permet de définir des valeurs pour la largeur (width), la hauteur (height), les marges externes (margin) et internes (padding).
+
+inline block : Occupe uniquement l'espace nécessaire au contenu (comme inline) et n'impose pas de saut de ligne. // Permet de définir des valeurs pour la largeur (width), la hauteur (height) et les marges complètes.
+
+flex: Établit un contexte de formatage flexible pour ses enfants (les flex items), activant des propriétés de distribution.
+Permet un alignement et un espacement complexes et dynamiques des éléments dans n'importe quelle direction (ligne ou colonne).
+
+justify content : aligné horizontalement
+align items : verticalement
+
+// 
+
+let userHobbies = ["Tennis", "Vélo", "Basket", "Cinéma", "Jeux videos"]; // Array > TABLEAU
+let userInfos = { 
+  id: 1,
+  adress: "2 rue des champs",
+  genre: "Homme",
+  job: "Designer",
+}; > object
+

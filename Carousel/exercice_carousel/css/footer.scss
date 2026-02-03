@@ -1,0 +1,42 @@
+/* FOOTER */
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--secondary-color);
+  color: white;
+
+  .footer-container {
+    display: flex;
+    justify-content: center;
+
+    .footer-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        font-size: var(--secondary-font-size);
+      }
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      svg {
+        margin: 10px;
+      }
+
+      p {
+        padding-top: 10px;
+        text-align: center;
+      }
+    }
+  }
+}

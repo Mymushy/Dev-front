@@ -1,0 +1,338 @@
+/* ============================================
+   STYLES GLOBAUX (appliqués à toute la page)
+   ============================================ */
+
+/* 
+  Sélecteur : body
+  Cible l'élément <body> de la page HTML
+*/
+body {
+  /* 
+    margin: 0; 
+    Supprime toutes les marges par défaut du navigateur
+    Évite l'espace blanc autour de la page
+  */
+  margin: 0;
+}
+
+/* 
+  Sélecteur : .container
+  Cible tous les éléments avec la classe "container"
+  Le point (.) indique une classe CSS
+*/
+.container {
+  /* 
+    max-width: 1024px;
+    Largeur maximale de 1024 pixels
+    Si l'écran est plus petit, le contenu s'adapte
+  */
+  max-width: 1024px;
+  /* 
+    margin: auto;
+    Centre horizontalement l'élément dans son parent
+    "auto" distribue l'espace disponible de manière égale à gauche et à droite
+  */
+  margin: auto;
+}
+
+/* 
+  Sélecteur : .overlay
+  Cible tous les éléments avec la classe "overlay"
+  Utilisé pour créer une couche semi-transparente par-dessus une image
+*/
+.overlay {
+  /* 
+    height: 100%;
+    Hauteur de 100% par rapport à l'élément parent
+  */
+  height: 100%;
+  /* 
+    width: 100%;
+    Largeur de 100% par rapport à l'élément parent
+  */
+  width: 100%;
+  /* 
+    background-color: rgba(0, 0, 0, 0.3);
+    Couleur de fond en noir semi-transparent
+    rgba = Red, Green, Blue, Alpha (transparence)
+    0, 0, 0 = noir pur
+    0.3 = 30% d'opacité (70% de transparence)
+  */
+  background-color: rgba(0, 0, 0, 0.3);
+  /* 
+    display: flex;
+    Active le mode Flexbox pour organiser les éléments enfants
+    Permet de centrer facilement le contenu
+  */
+  display: flex;
+  /* 
+    align-items: center;
+    Centre verticalement les éléments enfants (axe secondaire)
+  */
+  align-items: center;
+  /* 
+    justify-content: center;
+    Centre horizontalement les éléments enfants (axe principal)
+  */
+  justify-content: center;
+  /* 
+    color: white;
+    Couleur du texte en blanc
+  */
+  color: white;
+  /* 
+    font-size: 3rem;
+    Taille de police de 3 rem (rem = unité relative à la taille de base du navigateur)
+    1rem = généralement 16px, donc 3rem = 48px
+  */
+  font-size: 3rem;
+}
+
+/* ============================================
+   EN-TÊTE (HEADER)
+   ============================================ */
+
+/* 
+  Sélecteur : #header-top
+  Cible l'élément avec l'identifiant "header-top"
+  Le dièse (#) indique un identifiant (id) CSS
+  Un id est unique, contrairement à une classe
+*/
+#header-top {
+  /* 
+    background-color: black;
+    Couleur de fond noire
+  */
+  background-color: black;
+}
+
+/* 
+  Sélecteur : #header-top ul
+  Cible les éléments <ul> (listes) qui sont à l'intérieur de #header-top
+  C'est un sélecteur descendant (espace entre les sélecteurs)
+*/
+#header-top ul {
+  /* 
+    margin: 0;
+    Supprime les marges par défaut de la liste
+  */
+  margin: 0;
+  /* 
+    display: flex;
+    Transforme la liste en conteneur flexbox
+    Les éléments <li> seront alignés horizontalement
+  */
+  display: flex;
+  /* 
+    justify-content: flex-end;
+    Aligne les éléments à la fin (à droite) du conteneur
+  */
+  justify-content: flex-end;
+  /* 
+    list-style-type: none;
+    Supprime les puces (points) devant chaque élément de liste
+  */
+  list-style-type: none;
+}
+
+/* 
+  Sélecteur : #header-top ul a
+  Cible tous les liens <a> qui sont dans une liste <ul> 
+  qui est elle-même dans #header-top
+  Sélecteur descendant à trois niveaux
+*/
+#header-top ul a {
+  /* 
+    padding: 20px 15px;
+    Espacement interne (marge intérieure)
+    20px = haut et bas
+    15px = gauche et droite
+    Crée de l'espace cliquable autour du texte du lien
+  */
+  padding: 20px 15px;
+  /* 
+    display: inline-block;
+    Permet au lien de se comporter comme un bloc (on peut lui donner des dimensions)
+    tout en restant sur la même ligne (inline)
+  */
+  display: inline-block;
+  /* 
+    font-size: 1.6rem;
+    Taille de police de 1.6 rem (environ 25.6px)
+  */
+  font-size: 1.6rem;
+  /* 
+    text-decoration: none;
+    Supprime le soulignement par défaut des liens
+  */
+  text-decoration: none;
+  /* 
+    color: white;
+    Couleur du texte en blanc
+  */
+  color: white;
+}
+
+/* ============================================
+   SECTION BANNIÈRE (BANNER)
+   ============================================ */
+
+/* 
+  Sélecteur : #section-banner
+  Cible l'élément avec l'identifiant "section-banner"
+*/
+#section-banner {
+  /* 
+    background-image: url("./img/banner.jpg");
+    Définit une image de fond
+    url() = fonction CSS pour spécifier le chemin de l'image
+    "./img/banner.jpg" = chemin relatif vers l'image
+  */
+  background-image: url("./img/banner.jpg");
+  /* 
+    height: 80vh;
+    Hauteur de 80% de la hauteur de la fenêtre (viewport height)
+    vh = unité relative à la hauteur de l'écran
+    80vh = 80% de la hauteur de l'écran
+  */
+  height: 80vh;
+  /* 
+    background-size: cover;
+    L'image de fond couvre tout l'élément
+    L'image est redimensionnée pour remplir l'espace sans déformation
+    Les parties qui dépassent sont coupées
+  */
+  background-size: cover;
+}
+
+/* 
+  Sélecteur : .article-about
+  Cible tous les éléments avec la classe "article-about"
+*/
+.article-about {
+  /* 
+    display: flex;
+    Active Flexbox pour organiser les éléments enfants (les <div>)
+  */
+  display: flex;
+  /* 
+    margin-top: 80px;
+    Marge supérieure de 80 pixels
+    Crée un espacement entre les articles
+  */
+  margin-top: 80px;
+}
+
+/* 
+  Sélecteur : .article-about div
+  Cible tous les <div> qui sont à l'intérieur de .article-about
+*/
+.article-about div {
+  /* 
+    flex: 1;
+    Chaque <div> prend la même largeur (1 part égale)
+    Si il y a 2 div, chacun prend 50% de l'espace disponible
+  */
+  flex: 1;
+  /* 
+    padding: 30px;
+    Espacement interne de 30 pixels sur tous les côtés
+    Crée de l'espace entre le contenu et les bords
+  */
+  padding: 30px;
+}
+
+/* 
+  Sélecteur : .article-about div img
+  Cible toutes les images <img> qui sont dans un <div> 
+  qui est lui-même dans .article-about
+*/
+.article-about div img {
+  /* 
+    width: 100%;
+    Largeur de 100% par rapport à son conteneur parent (<div>)
+    L'image s'adapte à la largeur disponible
+  */
+  width: 100%;
+  /* 
+    height: 100%;
+    Hauteur de 100% par rapport à son conteneur parent
+  */
+  height: 100%;
+  /* 
+    object-fit: cover;
+    L'image remplit tout son conteneur sans déformation
+    Les parties qui dépassent sont coupées (comme background-size: cover)
+    Maintient les proportions de l'image
+  */
+  object-fit: cover;
+}
+
+/* 
+  Sélecteur : .article-about:nth-child(even)
+  Cible les éléments .article-about qui sont des enfants pairs (2ème, 4ème, etc.)
+  :nth-child(even) = pseudo-classe CSS pour cibler les éléments pairs
+  Permet d'alterner la disposition des articles
+*/
+.article-about:nth-child(even) {
+  /* 
+    flex-direction: row-reverse;
+    Inverse l'ordre des éléments enfants
+    Le texte et l'image changent de côté pour les articles pairs
+  */
+  flex-direction: row-reverse;
+}
+
+/* ============================================
+   SECTION APPEL À L'ACTION (CTA)
+   ============================================ */
+
+/* 
+  Sélecteur : #section-cta
+  Cible l'élément avec l'identifiant "section-cta"
+*/
+#section-cta {
+  /* 
+    background-image: url("./img/banner.jpg");
+    Définit la même image de fond que la bannière
+  */
+  background-image: url("./img/banner.jpg");
+}
+
+/* 
+  Sélecteur : #section-cta .overlay
+  Cible les éléments avec la classe "overlay" 
+  qui sont à l'intérieur de #section-cta
+  Ce sélecteur est plus spécifique que .overlay seul
+  Il surcharge les styles de .overlay pour cette section
+*/
+#section-cta .overlay {
+  /* 
+    padding-top: 150px;
+    Espacement interne en haut de 150 pixels
+    Crée de l'espace vertical en haut
+  */
+  padding-top: 150px;
+  /* 
+    padding-bottom: 150px;
+    Espacement interne en bas de 150 pixels
+    Crée de l'espace vertical en bas
+  */
+  padding-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+#email-notification {
+  padding: 0px 10px;
+  color: #165816;
+  border: 1px solid #165816;
+  background-color: #609960;
+  border-radius: 5px;
+  position: fixed;
+  top: 40px;
+  left: -800px;
+  display: none;
+}
+
+/* RESPONSIVE */

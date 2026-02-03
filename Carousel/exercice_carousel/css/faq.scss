@@ -1,0 +1,32 @@
+/* FAQ */
+#section-faq {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h2 {
+    text-align: center;
+    font-size: var(--primary-font-size);
+  }
+
+  .faq-items-container {
+    display: flex;
+    gap: 30px;
+
+    .faq-item {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
+      svg {
+        padding: 10px;
+        border: 1px solid #d3d3d3;
+        border-radius: 8px;
+      }
+
+      .faq-item-content {
+        padding: 20px;
+      }
+    }
+  }
+}

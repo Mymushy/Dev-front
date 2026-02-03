@@ -1,0 +1,17 @@
+/* SECTION SERVICES */
+#section-services {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  h2 {
+    text-align: center;
+    font-size: var(--primary-font-size);
+  }
+  .services-container {
+    display: flex;
+  }
+  .services-item {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+  }
+}
