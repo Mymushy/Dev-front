@@ -1,3 +1,4 @@
+const cartes = document.querySelectorAll(".carte");
 const grille = document.querySelector(".cartes");
 const boutonRejouer = document.querySelector(".rejouer");
 
