@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-top: 75px;
+  padding: 15px 40px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: normal;
+  font-family: "montana", sans-serif;  border: none;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #1b1b33 40%, #267b7e); 
+  color: #E15F13;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./Image/Final\ space.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.tableau {
+  height: 650px;
+  width: 1200px;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.cartes {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.carte.shake {
+  animation: shake 0.35s ease-in-out;
+}
+
+@keyframes shak {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-13px);
+  }
+  40% {
+    transform: translateX(13px);
+  }
+  60% {
+    transform: translateX(-8px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+}
+
+.cartes .carte {
+  cursor: pointer;
+  position: relative;
+  perspective: 800px;
+  transform-style: preserve-3d;
+  width: calc(100% / 7 - 12px);
+  height: calc(100% / 4 - 12px);
+}
+
+.cartes,
+.carte,
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartes .carte .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  background: #1b1b33;
+  border-radius: 7px;
+  box-shadow: 0 3px 10px #267b7e;
+  backface-visibility: hidden;
+  transition: transform 0.4s linear;
+}
+
+.carte .verso {
+  transform: rotateY(-180deg);
+}
+
+.carte .verso img {
+  max-width: 60px;
+  border-radius: 5px;
+}
+.carte .recto img {
+  max-width: 100px;
+  border-radius: 5px;
+}
+
+.carte.flip .verso {
+  transform: rotateY(0);
+}
+.carte.flip .recto {
+  transform: rotateY(180deg);
+}
+
+.rejouer {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #E15F13, #8aff80); 
+  color: #1b1b33;
+  text-transform: uppercase;
+  transition: transform 0.2s ease-in-out;
+  margin-top: 30px;
+}
+
+.rejouer:hover {
+  transform: scale(1.15); 
+}
+
+.rejouer:active {
+  transform: scale(0.95);
+}
